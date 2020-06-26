@@ -544,6 +544,13 @@ class Arguments(object):
         )
         v_meg.set_defaults(do_val=False)
         validation.add_argument(
+            "--do_val_inf",
+            dest="do_val_inf",
+            action="store_true",
+            help="Do run validation inference",
+        )
+        validation.set_defaults(do_val_inf=False)
+        validation.add_argument(
             "--val_data",
             default="./data/val/",
             type=str,

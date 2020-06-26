@@ -732,7 +732,8 @@ def main():
             "Training stage done. total time taken: {}".format(time.time() - train_start)
         )
         # ---- Train is done, next is to save validation inference
-        if opts.do_val:
+        logger.info("do_val_inf = "+str(opts.do_val_inf))
+        if opts.do_val and opts.do_val_inf:
             logger.info("Working on validation inference...")
             res_path = os.path.join(opts.work_dir, "results", "val")
             try:
